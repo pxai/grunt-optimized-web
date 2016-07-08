@@ -1,0 +1,39 @@
+{
+  "name": "grunt-optimized-web",
+  "version": "1.0.0",
+  "description": "Simple HTML app to show how to optimize apps",
+  "main": "optimized/index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pxai/grunt-optimized-web.git"
+  },
+  "keywords": [
+    "junefy",
+    "grunt",
+    "minification",
+    "concatenation"
+  ],
+  "author": "Pello Altadill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pxai/junefy/issues"
+  },
+  "devDependencies": {
+    "csslint": "^0.10.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-csslint": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-htmlmin": "^1.0.0",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-hashres": "^0.4.1",
+    "grunt-html": "^5.0.1",
+    "grunt-html-validation": "^0.1.18",
+    "grunt-processhtml": "^0.3.13"
+  }
+}
