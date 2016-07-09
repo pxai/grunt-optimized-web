@@ -15,7 +15,8 @@ module.exports=function(grunt) {
  'grunt-contrib-uglify',
  'grunt-processhtml',
  'grunt-hashres',
- 'grunt-html-validation'
+ 'grunt-html-validation',
+ 'grunt-image-embed'
 ].forEach(function (g) {
 	grunt.loadNpmTasks(g);
 });
