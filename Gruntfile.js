@@ -16,7 +16,8 @@ module.exports=function(grunt) {
  'grunt-processhtml',
  'grunt-hashres',
  'grunt-html-validation',
- 'grunt-image-embed'
+ 'grunt-image-embed',
+ 'grunt-accessibility',
 ].forEach(function (g) {
 	grunt.loadNpmTasks(g);
 });
@@ -110,11 +111,34 @@ htmlmin: {
 		  'stage/index.html': ['src/index.html']
 		}
 	}
- }
+ },
+ validation: {
+    options: {
+        reset: grunt.option('reset') || false,
+        stoponerror: false,
+        remotePath: 'http://decodize.com/',
+        relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.'] //ignores these errors 
+    },
+    files: {
+        src: ['src/*.html']
+    }
+},
+accessibility: {
+  options: {
+    accessibilityLevel: 'WCAG2A'
+  },
+  test: {
+    options: {
+      urls: ['http://localhost']
+    },
+    src: ['example/test.html']
+  }
+}
 });
 
 // Default task
 grunt.registerTask('default',['clean','cssmin','concat','uglify','processhtml','htmlmin']);
 grunt.registerTask('hard',['clean','jshint','csslint','htmllint','concat']);
+grunt.registerTask('access',['validation','accessibility']);
 
 };
