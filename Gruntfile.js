@@ -18,6 +18,7 @@ module.exports=function(grunt) {
  'grunt-html-validation',
  'grunt-image-embed',
  'grunt-accessibility',
+ 'grunt-tenon'
 ].forEach(function (g) {
 	grunt.loadNpmTasks(g);
 });
@@ -133,7 +134,21 @@ accessibility: {
     },
     src: ['example/test.html']
   }
-}
+},
+tenon: {
+        your_target: {
+            urls: [
+                {
+                    url: 'http://www2.foo.com/content/te-com/usa/en/solid-state-connectors/product-1-2106003-1.html',
+                    apiOptions: {
+                        projectID: "MY_SPECIAL_PROJECT_ID",
+                        importance: 3
+                    }
+                },
+                'http://www2.foo.com/content/te-dev/usa/en/index.html'
+            ]
+        }
+    }
 });
 
 // Default task
