@@ -56,7 +56,7 @@ grunt.initConfig({
         separator: ';'
       },
       dist: {
-        src: ['src/js/jquery.js','src/js/bootstrap.js','src/js/question.js','src/js/quiz.js','src/js/game.js','src/js/app.js','!src/**/*.min.js'],
+        src: ['src/js/jquery.js','src/js/bootstrap.js','src/js/app.js','!src/**/*.min.js'],
         dest: 'stage/js/app.min.js'
       }
     },
